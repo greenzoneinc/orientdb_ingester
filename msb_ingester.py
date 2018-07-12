@@ -26,7 +26,7 @@ def post_to_db(cmd):
 
     while True:
         try:
-            r = requests.post(url, headers=headers, data=script_encoded, auth=('root', '1c3-admin'))
+            r = requests.post(url, headers=headers, data=script_encoded, auth=('root', 'password'))
             response = json.loads(r.text)
             return response
         except ConnectionError as e:
